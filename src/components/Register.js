@@ -1,6 +1,7 @@
 import React from 'react';
 import './Register.css';
 import { Form, Input, Button, Checkbox } from 'antd';
+import {Link} from 'react-router-dom';
 
 const layout = {
   labelCol: {
@@ -122,6 +123,12 @@ class Register extends React.Component {
         <Form.Item {...tailLayout}>
           <Button type="primary" htmlType="submit">
             Register
+          </Button >
+          <Button className = 'btn' htmlType="submit">
+            <Link to = '/login'>
+            Log in
+            </Link>
+           
           </Button>
         </Form.Item>
       </Form>

@@ -6,6 +6,7 @@ import Cars from './Cars';
 import Contact from './Contact';
 import Register from './Register';
 import PageNotFound from './PageNotFound';
+import Login from './Login';
 import './Nav.css';
 import 'tachyons';
 
@@ -20,6 +21,7 @@ function App() {
             <Route exact path ='/cars' component ={Cars} />
             <Route exact path ='/contact' component ={Contact} />
             <Route exact  path ='/register' component = {Register} />
+            <Route exact  path ='/login' component = {Login} />
             <Route exact path = '/pageNotFound' component ={PageNotFound} />
             <Redirect to ='/PageNotFound' />
           </Switch>
