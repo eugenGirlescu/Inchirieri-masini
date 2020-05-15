@@ -1,0 +1,15 @@
+
+
+button{
+    color: rgb(0, 119, 255);
+    background-color: rgb(169, 171, 185);
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+   
+    opacity: 0.9;
+}
+.name{
+    color: red;
+}

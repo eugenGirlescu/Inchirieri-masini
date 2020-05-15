@@ -4,7 +4,10 @@ import Nav from './Nav';
 import Home from './Home';
 import Cars from './Cars';
 import Contact from './Contact';
-import About from './About';
+import Register from './Register';
+import PageNotFound from './PageNotFound';
+import './Nav.css';
+import 'tachyons';
 
 
 function App() {
@@ -16,7 +19,8 @@ function App() {
             <Route exact path ='/'  component ={Home}/>
             <Route exact path ='/cars' component ={Cars} />
             <Route exact path ='/contact' component ={Contact} />
-            <Route exact  path ='/about' component = {About} />
+            <Route exact  path ='/register' component = {Register} />
+            <Route exact path = '/pageNotFound' component ={PageNotFound} />
             <Redirect to ='/PageNotFound' />
           </Switch>
         </div>

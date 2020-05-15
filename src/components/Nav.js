@@ -5,7 +5,8 @@ import {Link} from 'react-router-dom';
 class Nav extends React.Component {
     render() {
         return(
-            <nav>
+            
+            <nav className ="display">
                 <ul className ="nav-links">
                     <Link to = '/'>
                     <li>Home</li>
@@ -13,8 +14,8 @@ class Nav extends React.Component {
                     <Link to ='/cars'>
                     <li>Cars</li>
                     </Link>
-                    <Link to = '/about'>
-                    <li>About</li>
+                    <Link to = '/register'>
+                    <li>Register</li>
                     </Link>
                     <Link to = '/contact'>
                     <li>Contact</li>
