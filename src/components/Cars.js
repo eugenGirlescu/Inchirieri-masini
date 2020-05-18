@@ -1,10 +1,9 @@
 import React from 'react';
+import DisplayCarList from './DisplayCarList';
 
 class Cars extends React.Component {
     render(){
-        return(
-            <div>Here are our cars</div>
-        );
+        return <DisplayCarList />
     }
 };
 export default Cars;

@@ -7,25 +7,27 @@ import Contact from './Contact';
 import Register from './Register';
 import PageNotFound from './PageNotFound';
 import Login from './Login';
-import './Nav.css';
 import 'tachyons';
+import './App.css';
 
 
 function App() {
   return (
       <Router>
-        <div className = 'App'>
+        <React.Fragment>
           <Nav/>
-          <Switch>
-            <Route exact path ='/'  component ={Home}/>
-            <Route exact path ='/cars' component ={Cars} />
-            <Route exact path ='/contact' component ={Contact} />
-            <Route exact  path ='/register' component = {Register} />
-            <Route exact  path ='/login' component = {Login} />
-            <Route exact path = '/pageNotFound' component ={PageNotFound} />
-            <Redirect to ='/PageNotFound' />
-          </Switch>
-        </div>
+          <main className = "main-content"> 
+            <Switch>
+              <Route exact path ='/'  component ={Home}/>
+              <Route exact path ='/cars' component ={Cars} />
+              <Route exact path ='/contact' component ={Contact} />
+              <Route exact  path ='/register' component = {Register} />
+              <Route exact  path ='/login' component = {Login} />
+              <Route exact path = '/pageNotFound' component ={PageNotFound} />
+              <Redirect to ='/PageNotFound' />
+            </Switch>
+            </main>
+        </React.Fragment>
     </Router>
   );
 }
