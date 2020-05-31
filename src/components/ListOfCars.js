@@ -5,13 +5,14 @@ export const cars = [
         id: 1,
         name: 'Dacia Logan',
         price: 10,
-        src:"dacia_logan.jpg"
+        
     },
 
     {
         id: 2,
         name: 'Skoda Octavia',
-        price:15
+        price:15,
+        src:""
 
     },
     {

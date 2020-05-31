@@ -1,16 +1,49 @@
 import React from 'react';
-import imag from './dacia_logan.jpg';
 import './DisplayCar.css';
 
  class DisplayCar extends React.Component {
-    render () {
-        return (
-           <div className ='tc bg-light-blue dib br3 ma2 grow bw2 shadow-5'>
-            <h1>{this.props.name}</h1>
-            <p>{this.props.price} euro/zi</p>
-            <img src ={this.props.img} />
-        </div> 
-        ); 
+  constructor(props){
+    super(props);
+    this.state ={
+      firstName: "",
+      lastName: ""
     }
+    this.handleFirstName=this.handleFirstName.bind(this);
+    this.handleLastName=this.handleLastName.bind(this);
+    this.handleSubmit=this.handleSubmit.bind(this);
+  }
+
+  handleFirstName(event){
+    this.setState({firstName:event.target.value});
+  }
+
+  handleLastName(event){
+    this.setState({lastName:event.target.value});
+  }
+
+  handleSubmit(){
+   let fname = document.getElementById('fname').value;
+   let lname=document.getElementById("lname").value;
+   this.setState({
+     firstName:fname,
+     lastName:lname
+   })
+  }
+
+      render() {
+         return (
+          <div className ="form">
+               <form  id ="class">
+                	First name: <input id="fname" type = "text"   /><br/>
+                  Last name: <input id ="lname" type = "text"    /><br/>
+              
+               </form>
+               <button onClick={this.handleSubmit}>Submit</button><br/>
+               <div>{this.state.firstName}</div>
+               <div>{this.state.lastName}</div>
+
+          </div>
+          );
+     }
 };
 export default DisplayCar;
