@@ -8,25 +8,15 @@ import './DisplayCar.css';
       firstName: "",
       lastName: ""
     }
-    this.handleFirstName=this.handleFirstName.bind(this);
-    this.handleLastName=this.handleLastName.bind(this);
     this.handleSubmit=this.handleSubmit.bind(this);
   }
-
-  handleFirstName(event){
-    this.setState({firstName:event.target.value});
-  }
-
-  handleLastName(event){
-    this.setState({lastName:event.target.value});
-  }
-
-  handleSubmit(){
-   let fname = document.getElementById('fname').value;
-   let lname=document.getElementById("lname").value;
-   this.setState({
-     firstName:fname,
-     lastName:lname
+   
+   handleSubmit(){
+    let fname = document.getElementById(this.props.id1).value;
+    let lname=document.getElementById(this.props.id2).value;
+    this.setState({
+      firstName:fname,
+      lastName:lname
    })
   }
 
@@ -34,9 +24,8 @@ import './DisplayCar.css';
          return (
           <div className ="form">
                <form  id ="class">
-                	First name: <input id="fname" type = "text"   /><br/>
-                  Last name: <input id ="lname" type = "text"    /><br/>
-              
+                	First name: <input id={this.props.id1} type = "text"   /><br/>
+                  Last name: <input id ={this.props.id2} type = "text"    /><br/>
                </form>
                <button onClick={this.handleSubmit}>Submit</button><br/>
                <div>{this.state.firstName}</div>

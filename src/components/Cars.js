@@ -1,18 +1,15 @@
 import React from 'react';
-import DisplayCarList from './DisplayCarList';
 import DisplayCar from './DisplayCar';
 
 class Cars extends React.Component {
-  
-   
-    render() {
+  render() {
       return(
         <div>
-         <DisplayCar />
-         <DisplayCar />
+         <DisplayCar id1="fname" id2="lname"/>
+         <DisplayCar id1="fname1" id2 = "lname1" />
         </div>
       );
     }
-    };
+  };
 
 export default Cars;
