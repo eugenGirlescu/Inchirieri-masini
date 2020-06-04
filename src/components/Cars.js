@@ -6,7 +6,6 @@ class Cars extends React.Component {
       return(
         <div>
          <DisplayCar id1="fname" id2="lname"/>
-         <DisplayCar id1="fname1" id2 = "lname1" />
         </div>
       );
     }
